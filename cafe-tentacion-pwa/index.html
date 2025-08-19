@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<meta name="theme-color" content="#2b1e16" />
+	<title>Café Tentación — PWA</title>
+	<meta name="description" content="Café Tentación: sabores artesanales, café de especialidad y experiencias inolvidables. PWA con soporte offline." />
+	<link rel="manifest" href="/manifest.webmanifest" />
+	<link rel="icon" href="/assets/icons/icon.svg" type="image/svg+xml" />
+	<link rel="apple-touch-icon" href="/assets/icons/icon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+	<header class="site-header">
+		<a class="brand" href="#home" aria-label="Café Tentación">
+			<img class="brand-mark" src="/assets/icons/icon.svg" alt="Logo Café Tentación" />
+			<span class="brand-name">Café Tentación</span>
+		</a>
+		<nav class="nav">
+			<button class="nav-toggle" aria-label="Abrir menú">☰</button>
+			<ul class="nav-list">
+				<li><a href="#menu">Menú</a></li>
+				<li><a href="#historia">Historia</a></li>
+				<li><a href="#galeria">Galería</a></li>
+				<li><a href="#visitanos">Visítanos</a></li>
+			</ul>
+		</nav>
+		<button id="installBtn" class="btn install-btn" hidden>Instalar App</button>
+	</header>
+	<main id="home">
+		<section class="hero section" aria-label="Bienvenido a Café Tentación">
+			<div class="hero-bg">
+				<div class="parallax layer layer-1"></div>
+				<div class="parallax layer layer-2"></div>
+				<div class="grain"></div>
+			</div>
+			<div class="container hero-content">
+				<h1 class="title reveal">Café Tentación</h1>
+				<p class="subtitle reveal" style="--d:.1s">Café de especialidad, momentos auténticos y una experiencia que querrás repetir.</p>
+				<div class="cta reveal" style="--d:.2s">
+					<a href="#menu" class="btn btn-primary">Explorar menú</a>
+					<a href="#visitanos" class="btn btn-ghost">Visítanos</a>
+				</div>
+			</div>
+			<svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+				<path d="M0,64L60,74.7C120,85,240,107,360,117.3C480,128,600,128,720,106.7C840,85,960,43,1080,42.7C1200,43,1320,85,1380,106.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+			</svg>
+		</section>
+		<section id="menu" class="section container">
+			<h2 class="section-title reveal">Nuestro menú</h2>
+			<p class="section-desc reveal" style="--d:.05s">Granos seleccionados, tostados con cariño y preparados por baristas apasionados.</p>
+			<div class="grid cards">
+				<article class="card reveal" style="--d:.1s">
+					<h3>Espresso Doble</h3>
+					<p>Intenso, aromático, un shot de energía para el día.</p>
+					<div class="price">$2.50</div>
+					<button class="btn btn-secondary">Ordenar</button>
+				</article>
+				<article class="card reveal" style="--d:.15s">
+					<h3>Cappuccino</h3>
+					<p>Equilibrio perfecto entre espresso, leche y espuma.</p>
+					<div class="price">$3.20</div>
+					<button class="btn btn-secondary">Ordenar</button>
+				</article>
+				<article class="card reveal" style="--d:.2s">
+					<h3>Cold Brew</h3>
+					<p>Suave, refrescante y con notas achocolatadas.</p>
+					<div class="price">$3.80</div>
+					<button class="btn btn-secondary">Ordenar</button>
+				</article>
+				<article class="card reveal" style="--d:.25s">
+					<h3>Mocha Tentación</h3>
+					<p>La combinación golosa de cacao fino y espresso.</p>
+					<div class="price">$4.10</div>
+					<button class="btn btn-secondary">Ordenar</button>
+				</article>
+			</div>
+		</section>
+		<section id="historia" class="section section-alt">
+			<div class="container">
+				<h2 class="section-title reveal">Nuestra historia</h2>
+				<p class="section-desc reveal" style="--d:.05s">Nacimos con el deseo de compartir una taza honesta. Trabajamos con caficultores locales y métodos sustentables.</p>
+				<div class="timeline">
+					<div class="milestone reveal" style="--d:.1s">
+						<span class="dot"></span>
+						<div class="content">
+							<h3>2016</h3>
+							<p>Abrimos nuestra primera barra de café de especialidad.</p>
+						</div>
+					</div>
+					<div class="milestone reveal" style="--d:.15s">
+						<span class="dot"></span>
+						<div class="content">
+							<h3>2019</h3>
+							<p>Iniciamos tostado propio con perfiles exclusivos.</p>
+						</div>
+					</div>
+					<div class="milestone reveal" style="--d:.2s">
+						<span class="dot"></span>
+						<div class="content">
+							<h3>2024</h3>
+							<p>Lanzamos nuestra PWA para estar siempre contigo.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<svg class="wave flip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+				<path d="M0,64L60,74.7C120,85,240,107,360,117.3C480,128,600,128,720,106.7C840,85,960,43,1080,42.7C1200,43,1320,85,1380,106.7L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+			</svg>
+		</section>
+		<section id="galeria" class="section container">
+			<h2 class="section-title reveal">Galería</h2>
+			<div class="gallery reveal" style="--d:.05s">
+				<figure class="glry-item i1"><figcaption>Latte Art</figcaption></figure>
+				<figure class="glry-item i2"><figcaption>Tostado</figcaption></figure>
+				<figure class="glry-item i3"><figcaption>Cold Brew</figcaption></figure>
+				<figure class="glry-item i4"><figcaption>Barra</figcaption></figure>
+				<figure class="glry-item i5"><figcaption>Granos</figcaption></figure>
+				<figure class="glry-item i6"><figcaption>Dulces</figcaption></figure>
+			</div>
+		</section>
+		<section class="section section-alt">
+			<div class="container">
+				<h2 class="section-title reveal">Lo que dicen</h2>
+				<div class="carousel reveal" style="--d:.05s">
+					<div class="slide">
+						<p>“El mejor cappuccino de la ciudad. Ambiente increíble.”</p>
+						<span>— Ana</span>
+					</div>
+					<div class="slide">
+						<p>“Su cold brew me acompaña todas las mañanas.”</p>
+						<span>— Diego</span>
+					</div>
+					<div class="slide">
+						<p>“Atención cálida y café excepcional.”</p>
+						<span>— Valeria</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="visitanos" class="section container">
+			<h2 class="section-title reveal">Visítanos</h2>
+			<p class="section-desc reveal" style="--d:.05s">Calle Aroma 123, Centro. Lun–Sáb 8:00–21:00 • Dom 9:00–19:00</p>
+			<div class="cta reveal" style="--d:.1s">
+				<a class="btn btn-primary" href="https://maps.google.com" target="_blank" rel="noreferrer noopener">Cómo llegar</a>
+				<a class="btn btn-ghost" href="tel:+521234567890">Llamar</a>
+			</div>
+		</section>
+	</main>
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>© <span id="year"></span> Café Tentación. Todos los derechos reservados.</p>
+			<a href="#home" class="to-top" aria-label="Volver arriba">↑</a>
+		</div>
+	</footer>
+	<script src="/app.js" defer></script>
+</body>
+</html>
